@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         final ZhiBiaoView view = findViewById(R.id.zhibiao);
         Button btn = findViewById(R.id.btn);
 

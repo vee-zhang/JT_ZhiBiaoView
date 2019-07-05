@@ -29,5 +29,13 @@ implementation project(path: ':zhibiaoview')
 - normalColor：正常格子的颜色。
 - scoreColor：得分格子的颜色。
 
+### 对外提供的方法
+
+- setNormalScore：设置正常的值
+- setScore：设置实际的值
+- setSpace：设置间距
+- setNormalColor：设置普通格子的颜色
+- setScoreColor：设置选中格子的颜色
+
 
 

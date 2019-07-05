@@ -217,26 +217,46 @@ public class ZhiBiaoView extends View {
         canvas.drawPath(mScorePath, mScorePaint);
     }
 
+    /**
+     * 设置正常的值
+     * @param normalScore
+     */
     public void setNormalScore(int normalScore) {
         this.normalScore = normalScore;
         requestLayout();
     }
 
+    /**
+     * 设置实际的值
+     * @param score
+     */
     public void setScore(int score) {
         this.score = score;
         requestLayout();
     }
 
+    /**
+     * 设置间距
+     * @param space
+     */
     public void setSpace(int space) {
         this.space = space;
         requestLayout();
     }
 
+    /**
+     * 设置普通格子的颜色
+     * @param normalColor
+     */
     public void setNormalColor(int normalColor) {
         this.normalColor = normalColor;
         invalidate();
     }
 
+    /**
+     * 设置选中格子的颜色
+     * @param scoreColor
+     */
     public void setScoreColor(int scoreColor) {
         this.scoreColor = scoreColor;
         invalidate();
