@@ -38,8 +38,8 @@ public class ZhiBiaoView extends View {
     private int normalColor;
     private int scoreColor;
 
-    private Path mNormalPath = new Path();
-    private Path mScorePath = new Path();
+    private Path mNormalPath;
+    private Path mScorePath;
 
 
     /**
@@ -174,6 +174,8 @@ public class ZhiBiaoView extends View {
      * 绘制未选中的砖块
      */
     private void setupNormalBrick(float brickWidth, float brickHeight, float arcWidth) {
+        mNormalPath   = new Path();
+        mScorePath = new Path();
         float startX = 0f;
         for (int i = 0; i < normalScore; i++) {
             if (i != score - 1) {
@@ -213,5 +215,30 @@ public class ZhiBiaoView extends View {
 
         canvas.drawPath(mNormalPath, mNormalPaint);
         canvas.drawPath(mScorePath, mScorePaint);
+    }
+
+    public void setNormalScore(int normalScore) {
+        this.normalScore = normalScore;
+        requestLayout();
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+        requestLayout();
+    }
+
+    public void setSpace(int space) {
+        this.space = space;
+        requestLayout();
+    }
+
+    public void setNormalColor(int normalColor) {
+        this.normalColor = normalColor;
+        invalidate();
+    }
+
+    public void setScoreColor(int scoreColor) {
+        this.scoreColor = scoreColor;
+        invalidate();
     }
 }

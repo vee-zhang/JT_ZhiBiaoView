@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <com.william.zhibiaoview.ZhiBiaoView
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="30dp"
         android:layout_gravity="center"
         app:normalColor="#cecece"
         app:scoreColor="#f00"
         app:score="7"
-        />
+        android:layout_marginTop="100dp"/>
 
     <com.william.zhibiaoview.ZhiBiaoView
         android:layout_width="match_parent"
@@ -25,14 +25,23 @@
         app:normalScore="5"
         app:score="2"
         app:space="5"
+        android:layout_marginTop="50dp"
         />
     <com.william.zhibiaoview.ZhiBiaoView
+        android:id="@+id/zhibiao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         app:normalScore="2"
         app:score="1"
         app:space="5"
+        android:layout_marginTop="50dp"
         />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点我"/>
 
 </LinearLayout>
