@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ZhiBiaoView">
+        <attr name="normalScore" format="integer"/>
+        <attr name="score" format="integer"/>
+        <attr name="arrowHeight" format="integer"/>
+        <attr name="space" format="integer"/>
+        <attr name="normalColor" format="color"/>
+        <attr name="scoreColor" format="color"/>
+    </declare-styleable>
+</resources>

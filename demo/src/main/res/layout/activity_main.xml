@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <com.william.zhibiaoview.ZhiBiaoView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_gravity="center"
+        app:normalColor="#cecece"
+        app:scoreColor="#f00"
+        app:score="7"
+        />
+
+    <com.william.zhibiaoview.ZhiBiaoView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_gravity="center"
+        app:normalColor="#cecece"
+        app:scoreColor="#f00"
+        app:normalScore="5"
+        app:score="2"
+        app:space="5"
+        />
+    <com.william.zhibiaoview.ZhiBiaoView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:normalScore="2"
+        app:score="1"
+        app:space="5"
+        />
+
+</LinearLayout>
