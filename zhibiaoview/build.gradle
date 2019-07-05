@@ -28,9 +28,9 @@ dependencies {
 def group = "com.william"
 def version = "1.0.0"
 def description = "公司用到的一个展示指标的View。"
-def siteUrl = 'https://github.com/william198824/JTCameraViewDemo'
-def gitUrl = 'git@github.com:william198824/JTCameraViewDemo.git'
-def issueUrl = 'https://github.com/william198824/JTCameraViewDemo/issues'
+def siteUrl = 'https://github.com/william198824/JT_ZhiBiaoView'
+def gitUrl = 'https://github.com/william198824/JT_ZhiBiaoView.git'
+def issueUrl = 'https://github.com/william198824/JT_ZhiBiaoView/issues'
 
 setGroup(group)
 setVersion(version)

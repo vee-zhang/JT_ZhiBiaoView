@@ -5,7 +5,7 @@
 ### download 下载地址
 
 ```groovy
-implementation project(path: ':zhibiaoview')
+implementation 'com.william:zhibiaoview:1.0.0'
 ```
 
 ### use 使用方式
