@@ -1,5 +1,7 @@
 # JT_ZhiBiaoView 使用方法
 
+![预览](demo.jpeg)
+
 ### download 下载地址
 
 ```groovy
