@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.william.zhibiaoview.ZheXianView;
+import com.william.zhibiaoview.ZheXianView.Data;
 import com.william.zhibiaoview.ZhiBiaoView;
+
+import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,5 +28,17 @@ public class MainActivity extends AppCompatActivity {
                 view.setNormalScore(5);
             }
         });
+
+        ZheXianView zxv = findViewById(R.id.zhexian);
+        LinkedList<Data> dataList = new LinkedList<>();
+        dataList.add(new Data("06.20", 80f));
+        dataList.add(new Data("06.20", 82f));
+        dataList.add(new Data("06.20", 85f));
+        dataList.add(new Data("06.20", 84f));
+        dataList.add(new Data("06.20", 0f));
+        dataList.add(new Data("06.20", 88));
+        dataList.add(new Data("06.20", 98f));
+
+        zxv.initData(dataList);
     }
 }

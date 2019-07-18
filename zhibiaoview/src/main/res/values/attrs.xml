@@ -7,4 +7,12 @@
         <attr name="normalColor" format="color"/>
         <attr name="scoreColor" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="ZXV">
+        <attr name="zxv_normal_color" format="color"/>
+        <attr name="zxv_score_color" format="color"/>
+        <attr name="maxValue" format="float"/>
+        <attr name="stepValue" format="float"/>
+        <attr name="textSize" format="integer"/>
+    </declare-styleable>
 </resources>

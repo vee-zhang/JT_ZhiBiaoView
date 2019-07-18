@@ -53,12 +53,7 @@ public class ZhiBiaoView extends View {
     }
 
     public ZhiBiaoView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
-
-    public ZhiBiaoView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr, 0);
-
+        super(context, attrs);
         initAttr(context, attrs);
         initPaint();
         initScorePaint();
