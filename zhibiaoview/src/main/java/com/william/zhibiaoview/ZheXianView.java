@@ -87,7 +87,7 @@ public class ZheXianView extends View {
     private void initAttr(Context context, AttributeSet attrs) {
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ZXV);
         this.normalColor = ta.getColor(R.styleable.ZXV_zxv_normal_color, getResources().getColor(R.color.nomal));
-        this.scoreColor = ta.getColor(R.styleable.ZXV_zxv_score_color, getResources().getColor(R.color.score));
+        this.scoreColor = ta.getColor(R.styleable.ZXV_zxv_score_color, getResources().getColor(R.color.correct));
         this.maxValue = ta.getFloat(R.styleable.ZXV_maxValue, 100f);
         this.stepValue = ta.getFloat(R.styleable.ZXV_stepValue, 20f);
         this.textSize = ta.getInteger(R.styleable.ZXV_textSize, 28);

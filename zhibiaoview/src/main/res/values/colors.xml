@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="nomal">#dddddd</color>
-    <color name="score">#fe8f6f </color>
+    <color name="mistake">#fe8f6f </color>
+    <color name="correct">#34c083</color>
+
 </resources>

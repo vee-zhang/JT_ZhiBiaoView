@@ -71,7 +71,7 @@ public class ZhiBiaoView extends View {
         this.score = ta.getInteger(R.styleable.ZhiBiaoView_score, 0);
         this.space = ta.getInteger(R.styleable.ZhiBiaoView_space, 2);
         this.normalColor = ta.getColor(R.styleable.ZhiBiaoView_normalColor, getResources().getColor(R.color.nomal));
-        this.scoreColor = ta.getColor(R.styleable.ZhiBiaoView_scoreColor, getResources().getColor(R.color.score));
+        this.scoreColor = ta.getColor(R.styleable.ZhiBiaoView_scoreColor, getResources().getColor(R.color.mistake));
         ta.recycle();
     }
 
