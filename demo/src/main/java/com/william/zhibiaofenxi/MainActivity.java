@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.william.zhibiaoview.StepView;
 import com.william.zhibiaoview.ZheXianView;
 import com.william.zhibiaoview.ZheXianView.Data;
 import com.william.zhibiaoview.ZhiBiaoView;
@@ -13,10 +14,15 @@ import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
 
+    private StepView stepView;
+    int index;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        stepView = findViewById(R.id.step);
 
 
         final ZhiBiaoView view = findViewById(R.id.zhibiao);
@@ -25,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                view.setNormalScore(5);
+                stepView.setSelectedIndex(++index);
             }
         });
 

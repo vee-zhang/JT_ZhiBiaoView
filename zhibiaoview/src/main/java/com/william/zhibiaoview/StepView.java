@@ -147,7 +147,7 @@ public class StepView extends View {
             } else {
                 arcOri = Step.ARC_NONE;
             }
-            steps[i] = new Step(arcOri, stepTitles[i], startX, top, startX + brickWidth, brickHeight, i <= selectedIndex, mNormalPaint, mNormalTextPaint, mScorePaint, mScoreTextPaint);
+            steps[i] = new Step(arcOri, stepTitles[i], startX, top, startX + brickWidth, brickHeight, mNormalPaint, mNormalTextPaint, mScorePaint, mScoreTextPaint);
             startX += (brickWidth + space);
         }
     }
@@ -156,8 +156,8 @@ public class StepView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        for (Step step : steps) {
-            step.draw(canvas);
+        for (int i = 0; i < steps.length; i++) {
+            steps[i].draw(canvas,i <= selectedIndex);
         }
     }
 
@@ -223,8 +223,6 @@ public class StepView extends View {
         Paint doneCellPaint;
         Paint doneTextPaint;
 
-        boolean done;
-
         String text;
         float left;
         float top;
@@ -234,14 +232,12 @@ public class StepView extends View {
 
         Path path = new Path();
 
-        public Step(int arcOri, String text, float left, float top, float right, float bottom, boolean done, Paint normalCellPaint, Paint normalTextPaint, Paint doneCellPaint, Paint doneTextPaint) {
+        public Step(int arcOri, String text, float left, float top, float right, float bottom, Paint normalCellPaint, Paint normalTextPaint, Paint doneCellPaint, Paint doneTextPaint) {
 
             this.text = text;
 
             this.left = left;
             this.top = top;
-
-            this.done = done;
 
             this.normalTextPaint = normalTextPaint;
             this.normalCellPaint = normalCellPaint;
@@ -300,7 +296,7 @@ public class StepView extends View {
             path.addRect(left, top, right, bottom, Path.Direction.CW);
         }
 
-        void draw(Canvas canvas) {
+        void draw(Canvas canvas,boolean done) {
             if (done) {
                 canvas.drawPath(path, doneCellPaint);
                 canvas.drawText(text, left + textOffsetX, top + textOffsetY, doneTextPaint);
