@@ -69,7 +69,7 @@ public class StepView extends View {
         this.space = ta.getInteger(R.styleable.ZhiBiaoView_space, 1);
         this.normalColor = ta.getColor(R.styleable.ZhiBiaoView_normalColor, getResources().getColor(R.color.nomal));
         this.scoreColor = ta.getColor(R.styleable.ZhiBiaoView_scoreColor, getResources().getColor(R.color.mistake));
-
+        this.selectedIndex = ta.getInteger(R.styleable.ZhiBiaoView_selectIndex, 0);
         ta.recycle();
     }
 
@@ -157,7 +157,7 @@ public class StepView extends View {
         super.onDraw(canvas);
 
         for (int i = 0; i < steps.length; i++) {
-            steps[i].draw(canvas,i <= selectedIndex);
+            steps[i].draw(canvas, i <= selectedIndex);
         }
     }
 
@@ -194,9 +194,10 @@ public class StepView extends View {
 
     /**
      * 设置步骤
+     *
      * @param stepTitles
      */
-    public void setStepTitles(String... stepTitles){
+    public void setStepTitles(String... stepTitles) {
         this.stepTitles = stepTitles;
         invalidate();
     }
@@ -296,7 +297,7 @@ public class StepView extends View {
             path.addRect(left, top, right, bottom, Path.Direction.CW);
         }
 
-        void draw(Canvas canvas,boolean done) {
+        void draw(Canvas canvas, boolean done) {
             if (done) {
                 canvas.drawPath(path, doneCellPaint);
                 canvas.drawText(text, left + textOffsetX, top + textOffsetY, doneTextPaint);

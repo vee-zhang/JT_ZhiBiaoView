@@ -6,6 +6,7 @@
         <attr name="space" format="integer"/>
         <attr name="normalColor" format="color"/>
         <attr name="scoreColor" format="color"/>
+        <attr name="selectIndex" format="integer"/>
     </declare-styleable>
 
     <declare-styleable name="ZXV">
@@ -14,5 +15,9 @@
         <attr name="maxValue" format="float"/>
         <attr name="stepValue" format="float"/>
         <attr name="textSize" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="StepView">
+
     </declare-styleable>
 </resources>

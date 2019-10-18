@@ -1,62 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.william.zhibiaoview.StepView
-        android:id="@+id/step"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_marginHorizontal="10dp"/>
-
-    <com.william.zhibiaoview.ZhiBiaoView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_gravity="center"
-        app:normalColor="#cecece"
-        app:scoreColor="#f00"
-        app:score="7"
-        android:layout_marginTop="100dp"/>
-
-    <com.william.zhibiaoview.ZhiBiaoView
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_gravity="center"
-        app:normalColor="#cecece"
-        app:scoreColor="#f00"
-        app:normalScore="5"
-        app:score="2"
-        app:space="5"
-        android:layout_marginTop="50dp"
-        />
-    <com.william.zhibiaoview.ZhiBiaoView
-        android:id="@+id/zhibiao"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:normalScore="2"
-        app:score="1"
-        app:space="5"
-        android:layout_marginTop="50dp"
-        />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="点我"/>
-    
-    <com.william.zhibiaoview.ZheXianView
-        android:id="@+id/zhexian"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:zxv_normal_color="#000"
-        app:zxv_score_color="@color/colorPrimary"
-        app:maxValue="100"
-        app:stepValue="20"/>
+        <com.william.zhibiaoview.DashBoardView
+            android:id="@+id/dash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-</LinearLayout>
+        <SeekBar
+            android:id="@+id/seek"
+            android:max="100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.william.zhibiaoview.StepView
+            android:id="@+id/step"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:selectIndex="2" />
+
+        <com.william.zhibiaoview.ZhiBiaoView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            app:normalColor="#cecece"
+            app:score="7"
+            app:scoreColor="#f00" />
+
+        <com.william.zhibiaoview.ZhiBiaoView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            app:normalColor="#cecece"
+            app:normalScore="5"
+            app:score="2"
+            app:scoreColor="#f00"
+            app:space="5" />
+
+        <com.william.zhibiaoview.ZhiBiaoView
+            android:id="@+id/zhibiao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            app:normalScore="2"
+            app:score="1"
+            app:space="5" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点我" />
+
+        <com.william.zhibiaoview.ZheXianView
+            android:id="@+id/zhexian"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:maxValue="100"
+            app:stepValue="20"
+            app:zxv_normal_color="#000"
+            app:zxv_score_color="@color/colorPrimary" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

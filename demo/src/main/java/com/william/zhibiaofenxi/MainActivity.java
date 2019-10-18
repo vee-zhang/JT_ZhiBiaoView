@@ -4,7 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
 
+import com.william.zhibiaoview.DashBoardView;
 import com.william.zhibiaoview.StepView;
 import com.william.zhibiaoview.ZheXianView;
 import com.william.zhibiaoview.ZheXianView.Data;
@@ -16,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     private StepView stepView;
     int index;
+
+    private SeekBar seekBar;
+    private DashBoardView dash;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +51,24 @@ public class MainActivity extends AppCompatActivity {
         dataList.add(new Data("06.20", 98f));
 
         zxv.initData(dataList);
+
+        dash = findViewById(R.id.dash);
+        seekBar = findViewById(R.id.seek);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                dash.setValue(progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 }
