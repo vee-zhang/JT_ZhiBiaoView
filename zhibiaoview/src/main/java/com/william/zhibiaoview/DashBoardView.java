@@ -51,6 +51,14 @@ public class DashBoardView extends View {
 
     private TextPaint mPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
 
+
+
+    private OnQuestionMarkClickListener mListener;
+
+    public void setOnQuestionMarkClickListener(OnQuestionMarkClickListener mListener) {
+        this.mListener = mListener;
+    }
+
     public DashBoardView(Context context) {
         this(context, null);
     }
@@ -369,8 +377,9 @@ public class DashBoardView extends View {
             float y = event.getY();
 
             if (x >= eventRect.left && x <= eventRect.right
-                    && y >= eventRect.top && y <= eventRect.bottom) {
-                Toast.makeText(getContext(), x + ":" + y, Toast.LENGTH_SHORT).show();
+                    && y >= eventRect.top && y <= eventRect.bottom && mListener != null) {
+                mListener.OnQuestionMarkClicked();
+//                Toast.makeText(getContext(), x + ":" + y, Toast.LENGTH_SHORT).show();
             }
         }
         return true;
@@ -379,5 +388,9 @@ public class DashBoardView extends View {
     public void setValue(float v){
         this.value = v;
         invalidate();
+    }
+
+    public interface OnQuestionMarkClickListener {
+        void OnQuestionMarkClicked();
     }
 }
