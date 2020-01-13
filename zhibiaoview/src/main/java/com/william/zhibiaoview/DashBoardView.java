@@ -24,8 +24,8 @@ public class DashBoardView extends View {
      */
     private float value = 0f;
 
-    private String titleLeft = "健康";
-    private String titleRight = "不健康";
+    private String titleLeft = "不健康";
+    private String titleRight = "健康";
 
     private Point centerPoint = new Point();
 
@@ -36,7 +36,7 @@ public class DashBoardView extends View {
     private int middleColor = Color.parseColor("#01a9ef");
     private int bedColor = Color.parseColor("#ed7352");
     //设置渐变的颜色范围
-    int[] colors = {goodColor, middleColor, bedColor};
+    int[] colors = {bedColor, middleColor, goodColor};
 
     int lineWidth1 = 20;
     int lineWidth2 = 60;
@@ -50,7 +50,6 @@ public class DashBoardView extends View {
     private LinearGradient linearGradient;
 
     private TextPaint mPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
-
 
 
     private OnQuestionMarkClickListener mListener;
@@ -379,13 +378,12 @@ public class DashBoardView extends View {
             if (x >= eventRect.left && x <= eventRect.right
                     && y >= eventRect.top && y <= eventRect.bottom && mListener != null) {
                 mListener.OnQuestionMarkClicked();
-//                Toast.makeText(getContext(), x + ":" + y, Toast.LENGTH_SHORT).show();
             }
         }
         return true;
     }
 
-    public void setValue(float v){
+    public void setValue(float v) {
         this.value = v;
         invalidate();
     }

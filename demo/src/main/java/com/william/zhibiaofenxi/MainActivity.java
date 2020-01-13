@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
+import android.widget.Toast;
 
 import com.william.zhibiaoview.DashBoardView;
 import com.william.zhibiaoview.StepView;
@@ -53,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
         zxv.initData(dataList);
 
         dash = findViewById(R.id.dash);
+        dash.setOnQuestionMarkClickListener(new DashBoardView.OnQuestionMarkClickListener() {
+            @Override
+            public void OnQuestionMarkClicked() {
+                Toast.makeText(MainActivity.this, "点击了", Toast.LENGTH_SHORT).show();
+            }
+        });
         seekBar = findViewById(R.id.seek);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
